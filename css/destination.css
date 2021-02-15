@@ -1,19 +1,56 @@
-*{
+/* FONT */
+
+@font-face {
+    font-family: 'whitneylight';
+    src: url('fonts/whitneylight.otf');
+}
+
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: 'whitneylight';
 }
 
-body{
-    font-family: Arial, Helvetica, sans-serif;
+
+/* HTML */
+
+.title {
+    font-weight: 500;
+    font-size: 30px;
+    width: 100%;
 }
 
-img{
+.container-title {
+    align-items: center;
+    justify-content: center;
+    /* max-width: 1080px; */
+    margin: 50px auto;
+    position: relative;
+    width: 85vw;
+}
+
+.title h1 {
+    color: #312d2c;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: left;
+    border-bottom: 5px solid #413b3b;
+}
+
+.title h2 {
+    text-align: left;
+    font-size: 20px;
+}
+
+img {
     width: 100%;
     display: block;
 }
 
-.container{
+.container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 15px;
@@ -21,11 +58,11 @@ img{
     margin: 40px auto;
 }
 
-.img-box{
+.img-box {
     position: relative;
 }
 
-.info{
+.info {
     background: #252525;
     position: absolute;
     bottom: 0;
@@ -33,27 +70,26 @@ img{
     padding: 15px;
     width: 100%;
     text-align: center;
-
 }
 
-.info h2{
+.info h2 {
     padding: 10px 0;
     font-size: 16px;
 }
 
-.info p{
+.info p {
     padding: 10px 0;
     opacity: 0.7;
     font-size: 15px;
 }
 
-.hidePara{
+.hidePara {
     display: none;
 }
 
-.info a{
+.info a {
     display: block;
-	border-radius: 5px;
+    border-radius: 5px;
     background: #fff;
     width: 50%;
     margin: 10px auto;
@@ -64,11 +100,11 @@ img{
     transition: all 1.5s ease;
 }
 
-.info a:hover{
+.info a:hover {
     background: lightgray;
 }
 
-.shape{
+.shape {
     height: 0;
     background: rgba(0, 0, 0, 0.2);
     position: absolute;
@@ -78,26 +114,25 @@ img{
     transition: all 1s ease;
 }
 
-.shape h2{
+.shape h2 {
     text-align: center;
     padding: 10px 0;
     color: #fff;
     opacity: 0.8;
 }
 
-.img-box:hover .shape{
+.img-box:hover .shape {
     height: 40px;
 }
 
-
-@media screen and (max-width: 1170px){
-    .container{
+@media screen and (max-width: 1170px) {
+    .container {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media screen and (max-width: 768px){
-    .container{
+@media screen and (max-width: 768px) {
+    .container {
         grid-template-columns: 1fr;
     }
 }

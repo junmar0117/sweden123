@@ -1,0 +1,164 @@
+@font-face {
+    font-family: "whitneylight";
+    src: url("fonts/whitneylight.otf");
+}
+
+@font-face {
+    font-family: "Aadam";
+    src: url("fonts/Aadam-regular.otf");
+}
+
+nav {
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    top: 0;
+    font-family: "whitneylight" !important;
+    text-transform: uppercase;
+    padding: 0 4%;
+    height: 90px;
+    background-color: #312d2c;
+    font-weight: normal !important;
+}
+
+nav .logo {
+    font-family: "whitneylight" !important;
+    float: left;
+    /* width: 40%; */
+    width: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    color: #fff;
+}
+
+nav .links {
+    /* float: left;
+	width: 40%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	font-size: 24px;
+	color: #fff; */
+    float: right;
+    padding: 0;
+    margin: 0;
+    /* width: 800px; */
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav .links li {
+    list-style: none;
+}
+
+nav .logo a {
+    font-family: "whitneylight" !important;
+    float: left;
+    /* width: 40%; */
+    width: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav .links a {
+    font-family: "whitneylight" !important;
+    display: block;
+    padding: 10px;
+    font-size: 15px;
+    color: #fff;
+    text-decoration: none;
+    white-space: pre;
+}
+
+nav .links a::after {
+    content: "";
+    display: block;
+    align-items: center;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width 0.3s ease;
+}
+
+nav .links a:hover::after {
+    width: 100%;
+    transition: width 0.3s ease;
+}
+
+#nav-toggle {
+    position: absolute;
+    top: -90px;
+}
+
+nav .icon-burger {
+    display: none;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+nav .icon-burger .line {
+    width: 30px;
+    height: 5px;
+    background-color: #fff;
+    margin: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.page-content {
+    padding-top: 7rem;
+    padding-bottom: 6rem;
+}
+
+@media screen and (max-width: 1190px) {
+    nav .logo {
+        float: none;
+        width: auto;
+        justify-content: center;
+    }
+    nav .links {
+        float: none;
+        position: fixed;
+        z-index: 9;
+        left: 0;
+        right: 0;
+        top: 90px;
+        bottom: 100%;
+        width: auto;
+        height: auto;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background-color: rgba(0, 0, 0, 0.8);
+        overflow: hidden;
+        box-sizing: border-box;
+        transition: all 0.5s ease-in-out;
+    }
+    nav .links a {
+        font-size: 20px;
+    }
+    nav :checked~.links {
+        bottom: 0;
+    }
+    nav .icon-burger {
+        display: block;
+    }
+    nav :checked~.icon-burger .line:nth-child(1) {
+        transform: translateY(10px) rotate(225deg);
+    }
+    nav :checked~.icon-burger .line:nth-child(3) {
+        transform: translateY(-10px) rotate(-225deg);
+    }
+    nav :checked~.icon-burger .line:nth-child(2) {
+        opacity: 0;
+    }
+}

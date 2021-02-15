@@ -32,11 +32,11 @@ h1 {
 .rwd-table tr {
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
-  background-color: #d3d3d3;
+  background-color: white;
 }
 
 .rwd-table tr:nth-child(odd):not(:first-child) {
-  background-color: #b5b5b5;
+  background-color: #f2f3f4;
 }
 
 .rwd-table th {
@@ -89,7 +89,7 @@ h1 {
 }
 @media screen and (min-width: 600px) {
   .rwd-table tr:hover:not(:first-child) {
-    background-color: #827e7d;
+    background-color: #d3d3d3;
   }
   .rwd-table td:before {
     display: none;
@@ -117,4 +117,5 @@ color: black;}
 
 a:hover{
 	color:	#f2f2f2;
+}
 }

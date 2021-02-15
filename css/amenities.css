@@ -1,0 +1,63 @@
+/* FONT */
+
+@font-face {
+    font-family: 'whitneylight';
+    src: url('fonts/whitneylight.otf');
+}
+
+
+/* HTML */
+
+* {
+    font-family: 'whitneylight';
+}
+
+.title {
+    font-weight: 500;
+    font-size: 30px;
+    width: 100%;
+}
+
+.container {
+    align-items: center;
+    justify-content: center;
+    /* max-width: 1080px; */
+    margin: 50px auto;
+    position: relative;
+    width: 70vw;
+}
+
+h1 {
+    color: #312d2c;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: left;
+    border-bottom: 5px solid #413b3b;
+}
+
+h2 {
+    text-align: left;
+    font-size: 20px;
+}
+
+.read a {
+    text-decoration: none;
+    background: #413b3b;
+    color: #fff;
+    padding: 7px 15px;
+    font-weight: 400;
+    transition: all 0.3s ease;
+}
+
+.row section .bottom a:hover {
+    transform: scale(0.97);
+}
+
+@media (max-width: 900px) {
+    .title {
+        font-size: 24px;
+        width: 100%;
+    }
+}
